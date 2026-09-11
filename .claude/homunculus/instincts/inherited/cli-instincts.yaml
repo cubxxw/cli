@@ -1,0 +1,385 @@
+# Instincts generated from https://github.com/cubxxw/cli
+# Generated: 2026-07-02T20:38:40.876Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: cli-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cubxxw/cli
+---
+
+# Cli Commit Length
+
+## Action
+
+Write moderate-length commit messages (~61 characters)
+
+## Evidence
+
+- Average commit message length: 61 chars
+- Based on 5 commits
+
+---
+id: cli-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/cli
+---
+
+# Cli Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: cli-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/cli
+---
+
+# Cli Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: cli-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/cli
+---
+
+# Cli Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: cli-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cubxxw/cli
+---
+
+# Cli Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: cli-workflow-feature-or-bugfix-with-tests
+trigger: "when doing feature or bugfix with tests"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/cli
+---
+
+# Cli Workflow Feature Or Bugfix With Tests
+
+## Action
+
+Follow the feature-or-bugfix-with-tests workflow:
+1. Edit or create implementation file(s) in the relevant internal or pkg directory.
+2. Edit or create corresponding test file(s) in the same directory.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: internal/skills/registry/registry.go, internal/skills/registry/registry_test.go, pkg/cmd/skills/install/install.go
+
+---
+id: cli-workflow-multi-docs-update
+trigger: "when doing multi docs update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/cli
+---
+
+# Cli Workflow Multi Docs Update
+
+## Action
+
+Follow the multi-docs-update workflow:
+1. Edit multiple documentation files (e.g., README, install guides) to fix errors or improve content.
+2. Commit all related documentation changes together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: docs/install_linux.md, docs/install_macos.md, docs/install_windows.md
+
+---
+id: cli-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct File Naming
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Pattern in namingConventions.files: snake_case
+
+---
+id: cli-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: cli-instinct-class-naming
+trigger: "When defining a new struct or class"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct Class Naming
+
+## Action
+
+Use PascalCase for struct/class names
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: cli-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: cli-instinct-import-style
+trigger: "When importing modules/packages"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: cli-instinct-export-style
+trigger: "When exporting functions or types"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: cli-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct Test Location
+
+## Action
+
+Place test files in the same directory as the implementation, using _test.go suffix
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+- Examples: registry_test.go, install_test.go
+
+---
+id: cli-instinct-test-update-with-feature
+trigger: "When implementing a new feature or fixing a bug"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct Test Update With Feature
+
+## Action
+
+Update or add corresponding test files in the same directory
+
+## Evidence
+
+- Workflow: feature-or-bugfix-with-tests
+- Files: registry.go + registry_test.go, install.go + install_test.go
+
+---
+id: cli-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct Commit Prefix
+
+## Action
+
+Prefix commit messages with the type of change (e.g., fix, docs), optionally with scope in parentheses
+
+## Evidence
+
+- Pattern in commits.prefixes: fix, docs
+- Examples: fix(skills): ..., docs: ...
+
+---
+id: cli-instinct-commit-length
+trigger: "When composing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct Commit Length
+
+## Action
+
+Keep commit messages concise, around 60 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength: 61
+
+---
+id: cli-instinct-feature-bugfix-workflow
+trigger: "When adding a new feature or fixing a bug"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct Feature Bugfix Workflow
+
+## Action
+
+Edit or create implementation file(s) in internal or pkg, and edit or create corresponding test file(s) in the same directory
+
+## Evidence
+
+- Workflow: feature-or-bugfix-with-tests
+- Files: registry.go, registry_test.go, install.go, install_test.go
+
+---
+id: cli-instinct-multi-docs-update-workflow
+trigger: "When fixing or improving documentation across several files at once"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/cli
+---
+
+# Cli Instinct Multi Docs Update Workflow
+
+## Action
+
+Edit multiple documentation files and commit all related changes together
+
+## Evidence
+
+- Workflow: multi-docs-update
+- Files: install_linux.md, install_macos.md, install_windows.md
+
